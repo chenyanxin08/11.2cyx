@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" href=""/>
+    <title></title>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+    <script>
+        $(function () {
+            $('.btn').click(function () {
+                var name = $(".ipt1").val();
+                var sex = $(".ipt2").val();
+                $.ajax({
+                    url:"http://localhost:3000/xin",
+                    type:'POST',
+                    data:{
+                        name:name,
+                        sex:sex
+                    },
+                    success: function (e) {
+                        
+                    }
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+<input type="text" class="ipt1"/>
+<input type="text" class="ipt2"/>
+<button class="btn">添加</button>
+<table>
+
+</table>
+</body>
+</html>
